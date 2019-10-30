@@ -8,14 +8,14 @@ Todos los ejercicios tienen que estar disponibles al mismo tiempo.
 **Tarea 4.1 Rutas y Vistas**
 * a) Crea una ruta (contacto) para acceder a tus datos personales.
 * b) Crea una ruta (blog) que reciba como parámetro un identificador y muestre en la vista "Este es el artículo numero 'identificador'.
-* c) Crea una ruta (blog) que reciba dos parámetros, un identificador y un nombre, y muestre en la vista "Este es el artículo número 'identificador' de 'nombre'. Restringe el formato de los parámetros de tal manera que identificador sea numerico y nombre contenga caracteres de la a-z/A-Z. Así mismo el segundo parámetro será opcional, en caso de no indicarse, será 'anónimo'.
+* c) Crea una ruta (blog) que reciba dos parámetros, un identificador y un nombre, y muestre en la vista "Este es el artículo número 'identificador' de 'nombre'. Restringe el formato de los parámetros de tal manera que identificador sea numerico y nombre contenga caracteres de la a-z/A-Z.
 
 **TAREA 4.2 Rutas Vista Controlador**
 
 Crea un controlador 'SaludoController' para implementar:
 * a) Crea una ruta (saludo) y asignale un nombre, que devuelve en la vista correspondiente "Kaixo!".
 * b) Crea una ruta (saludo) y asignale un nombre, que reciba como parametro un nombre y que devuelve en la vista correspondiente "Kaixo *nombre*!".
-* c) Crea una ruta (saludo) y asignale un nombre, que reciba dos parámetros: un nombre y un color (hexadecimal) que devuelve en la vista correspondiente "Kaixo *nombre*!" en el color indicado.
+* c) Crea una ruta (saludo) y asignale un nombre, que reciba dos parámetros: un nombre y un color (hexadecimal) que devuelve en la vista correspondiente "Kaixo *nombre*!" en el color indicado.  Así mismo el segundo parámetro será opcional, en caso de no indicarse, será 'anónimo'.
 
 **TAREA 4.3 Formularios**
 * a) Crea un formulario de contacto (nombre, apellido) con el método GET y muestra los datos introducidos en la vista creada en el punto anterior de tal manera que se muestre "Kaixo *nombre* *apellido*!".
