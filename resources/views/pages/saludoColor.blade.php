@@ -80,16 +80,16 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Jon Valdés Díaz
+                <div class="title m-b-md" style="color: #{{$color}};">
+                    {{$nombre}}
                 </div>
 
                 <div class="links">
                     <a href="{{route('blog', 1)}}">Blog</a>
                     <a href="/blog/2/Valdes">Nombre</a>
                     <a href="{{route('saludo', 'Jon Valdes')}}">Saludo</a>
-                    <a href="{{route('saludo.simple')}}">Kaixo</a>
-                    <a href="{{route('saludo.color', ['Jon Valdes', 'ff6600'])}}">Saludo Color</a>
+                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
