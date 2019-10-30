@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('contacto', function(){
+  return view('pages/contacto');
+});
+
+Route::get('blog/{idProducto}',function($idProducto){
+  return view('pages/blog', array('idProducto'=>$idProducto));
+})->name('blog');
+
+Route::get('blog/{idProducto}/{nombre}',function($idProducto, $nombre){
+  return view('pages/blog', ['idProducto'=>$idProducto, 'nombre'=>$nombre]);
+})->where(['idProducto' => '[0-9]+', 'nombre' => '[A-Za-z]+'])->name('blog.nombreId');
