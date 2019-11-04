@@ -30,7 +30,7 @@ class SaludoController extends Controller
     	$saludos = json_decode($data, true);
     	$nombre = $request->input('nombre');
     	$apellido = $request->input('apellido');
-    	return view('pages/saludoForm2', ['nombre'=>$nombre, 'apellido'=>$apellido, 'saludos'=>$saludos]);
+    	return view('pages/formJSON', ['nombre'=>$nombre, 'apellido'=>$apellido, 'saludos'=>$saludos]);
     }
     
 }

@@ -70,5 +70,11 @@
             <label>Apellido:</label><input type="text" name="apellido" id="apellido">
             <input type="submit" name="enviar" value="enviar">
         </form>
+
+        @isset($saludos)
+            @foreach($saludos as $saludo)
+                <p>{{$saludo["saludo"]}} {{$nombre}} {{$apellido}}</p>
+            @endforeach
+        @endisset
     </body>
 </html>
