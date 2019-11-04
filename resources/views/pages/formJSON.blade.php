@@ -64,37 +64,10 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md" style="color: #{{$color}};">
-                    Kaixo {{$nombre}}
-                </div>
-
-                <div class="links">
-                    <a href="{{route('blog', 1)}}">Blog</a>
-                    <a href="/blog/2/Valdes">Nombre</a>
-                    <a href="{{route('saludo', 'Jon Valdes')}}">Saludo</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+        <form method="post" action="">
+            <label>Nombre:</label><input type="text" name="nombre" id="nombre">
+            <label>Apellido:</label><input type="text" name="apellido" id="apellido">
+            <input type="submit" name="enviar" value="enviar">
+        </form>
     </body>
 </html>

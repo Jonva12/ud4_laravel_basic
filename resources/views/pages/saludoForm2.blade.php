@@ -80,8 +80,8 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md" style="color: #{{$color}};">
-                    Kaixo {{$nombre}}
+                <div class="title m-b-md">
+                    
                 </div>
 
                 <div class="links">

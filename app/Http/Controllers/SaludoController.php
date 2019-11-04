@@ -18,5 +18,17 @@ class SaludoController extends Controller
     public function color($nombre, $color = 'anonimo'){
     	return view('pages/saludoColor', array('nombre'=>$nombre), array('color'=>$color));
     }
+
+    public function form(Request $request){
+    	$nombre = $request->input('nombre');
+    	$apellido = $request->input('apellido');
+    	return view('pages/saludoForm', array('nombre'=>$nombre), array('apellido'=>$apellido));
+    }
+
+    public function form2(Request $request){
+    	$nombre = $request->input('nombre');
+    	$apellido = $request->input('apellido');
+    	return view('pages/saludoForm', array('nombre'=>$nombre), array('apellido'=>$apellido));
+    }
     
 }

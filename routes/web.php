@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('form', function () {
+    return view('pages/form');
+});
+
 Route::get('contacto', function(){
   return view('pages/contacto');
 });
@@ -28,5 +33,7 @@ Route::get('blog/{idProducto}/{nombre}',function($idProducto, $nombre){
 })->where(['idProducto' => '[0-9]+', 'nombre' => '[A-Za-z]+'])->name('blog.nombreId');
 
 Route::get('/saludo/{nombre}', 'SaludoController@index')->name('saludo');
+Route::get('/saludoForm', 'SaludoController@form')->name('saludo.form');
+Route::post('/saludoForm2', 'SaludoController@form2')->name('saludo.form2');
 Route::get('/saludo', 'SaludoController@saludo')->name('saludo.simple');
 Route::get('/saludo/{nombre}/{color?}', 'SaludoController@color')->name('saludo.color');
