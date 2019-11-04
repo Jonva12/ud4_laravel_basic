@@ -80,11 +80,9 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
                     @foreach($saludos as $saludo)
                         <p>{{$saludo["saludo"]}} {{$nombre}} {{$apellido}}</p>
                     @endforeach
-                </div>
 
                 <div class="links">
                     <a href="{{route('blog', 1)}}">Blog</a>
