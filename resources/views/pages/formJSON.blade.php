@@ -64,7 +64,8 @@
         </style>
     </head>
     <body>
-        <form method="post" action="">
+        <form method="post" action="{{route('saludo.form2')}}">
+            @csrf
             <label>Nombre:</label><input type="text" name="nombre" id="nombre">
             <label>Apellido:</label><input type="text" name="apellido" id="apellido">
             <input type="submit" name="enviar" value="enviar">

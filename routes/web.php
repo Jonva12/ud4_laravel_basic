@@ -20,6 +20,10 @@ Route::get('form', function () {
     return view('pages/form');
 });
 
+Route::get('form2', function () {
+    return view('pages/formJSON');
+});
+
 Route::get('contacto', function(){
   return view('pages/contacto');
 });

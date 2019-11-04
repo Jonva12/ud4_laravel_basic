@@ -26,9 +26,11 @@ class SaludoController extends Controller
     }
 
     public function form2(Request $request){
+    	$data = file_get_contents("data/saludos.json");
+    	$saludos = json_decode($data, true);
     	$nombre = $request->input('nombre');
     	$apellido = $request->input('apellido');
-    	return view('pages/saludoForm', array('nombre'=>$nombre), array('apellido'=>$apellido));
+    	return view('pages/saludoForm2', ['nombre'=>$nombre, 'apellido'=>$apellido, 'saludos'=>$saludos]);
     }
     
 }
