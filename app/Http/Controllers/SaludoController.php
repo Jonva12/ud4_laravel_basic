@@ -32,5 +32,20 @@ class SaludoController extends Controller
     	$apellido = $request->input('apellido');
     	return view('pages/formJSON', ['nombre'=>$nombre, 'apellido'=>$apellido, 'saludos'=>$saludos]);
     }
+
+    public function form3(Request $request){
+
+    	$validatedData = $request->validate([
+	        'nombre' => 'required|string|min:2|max:15',
+	        'apellido' => 'required|string|min:2|max:20',
+	        'email' => 'required|email',
+	        'tlf' => 'nullable|numeric|min:6xxxxxxxxx|max:9xxxxxxxxx',
+    	]);
+    	$nombre = $request->input('nombre');
+    	$apellido = $request->input('apellido');
+    	$email = $request->input('email');
+    	$tlf = $request->input('tlf');
+    	return view('pages/saludoForm3', ['nombre'=>$nombre, 'apellido'=>$apellido, 'email'=>$email, 'tlf'=>$tlf]);
+    }
     
 }
