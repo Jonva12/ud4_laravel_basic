@@ -39,8 +39,11 @@ class SaludoController extends Controller
 	        'nombre' => 'required|string|min:2|max:15',
 	        'apellido' => 'required|string|min:2|max:20',
 	        'email' => 'required|email',
-	        'tlf' => 'nullable|numeric|min:6xxxxxxxxx|max:9xxxxxxxxx',
+	        'tlf' => ['nullable','regex:/^[9|6|7][0-9]{8}$/'],
+
+
     	]);
+
     	$nombre = $request->input('nombre');
     	$apellido = $request->input('apellido');
     	$email = $request->input('email');
