@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Rules\dni;
 
 class SaludoController extends Controller
 {
@@ -40,15 +41,29 @@ class SaludoController extends Controller
 	        'apellido' => 'required|string|min:2|max:20',
 	        'email' => 'required|email',
 	        'tlf' => ['nullable','regex:/^[9|6|7][0-9]{8}$/'],
-
+	        'dni' => ['required', 'string', new dni],
 
     	]);
+    	/*$messages = [
+		    'nombre.required'    => 'El campo :attribute es obligatorio.',
+		    'nombre.string'    => 'El campo :attribute debe ser un string.',
+		    'nombre.min' => 'El valor del campo :attribute que es :input no puede ser menor de :min',
+		    'nombre.max'      => 'El valor del campo :attribute que es :input no puede ser mayor de :max',
+		    'apellido.required'    => 'El campo :attribute es obligatorio.',
+		    'apellido.string'    => 'El campo :attribute debe ser un string.',
+		    'apellido.min' => 'El valor del campo :attribute que es :input no puede ser menor de :min',
+		    'apellido.max'      => 'El valor del campo :attribute que es :input no puede ser mayor de :max',
+		    'email.required'    => 'El campo :attribute es obligatorio.',
+		];*/
+
+		//$validator = Validator::make($input, $validatedData, $messages);
 
     	$nombre = $request->input('nombre');
     	$apellido = $request->input('apellido');
     	$email = $request->input('email');
     	$tlf = $request->input('tlf');
-    	return view('pages/saludoForm3', ['nombre'=>$nombre, 'apellido'=>$apellido, 'email'=>$email, 'tlf'=>$tlf]);
+    	$dni = $request->input('dni');
+    	return view('pages/saludoForm3', ['nombre'=>$nombre, 'apellido'=>$apellido, 'email'=>$email, 'tlf'=>$tlf, 'dni'=>$dni]);
     }
     
 }

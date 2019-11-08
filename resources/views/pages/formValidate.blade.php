@@ -79,6 +79,8 @@
             {!! $errors->first('email', '<small>:message</small><br>') !!}
             <label>Telefono: </label><input type="number" name="tlf" id="tlf" value="{{old('tlf')}}"><br>
             {!! $errors->first('tlf', '<small>:message</small><br>') !!}
+            <label>DNI: </label><input type="text" name="dni" id="dni" value="{{old('dni')}}"><br>
+            {!! $errors->first('dni', '<small>:message</small><br>') !!}
             <input type="submit" name="enviar" value="enviar">
         </form>
     </body>

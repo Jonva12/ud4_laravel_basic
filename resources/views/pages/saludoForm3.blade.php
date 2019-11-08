@@ -80,7 +80,7 @@
             @endif
 
             <div class="content">
-                   {{$nombre}} {{$apellido}} {{$email}} {{$tlf}}
+                   {{$nombre}} {{$apellido}} {{$email}} {{$tlf}} {{$dni}}
 
                 <div class="links">
                     <a href="{{route('blog', 1)}}">Blog</a>
