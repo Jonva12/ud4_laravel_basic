@@ -25,15 +25,15 @@ class dni implements Rule
      */
     public function passes($attribute, $value)
     {
-        function validar_dni($value){
-            $letra = substr($value, -1);
-            $numeros = substr($value, 0, -1);
+        $dni = $value;
+        
+        $letra = substr($dni, -1);
+        $numeros = substr($dni, 0, -1);
             if ( substr("TRWAGMYFPDXBNJZSQVHLCKE", $numeros%23, 1) == $letra && strlen($letra) == 1 && strlen ($numeros) == 8 ){
                 return true;
             }else{
                 return false;
             }
-        }
     }
 
     /**
